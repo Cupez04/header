@@ -1,0 +1,161 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+transition: all 0.3s ease;
+}
+
+.header {
+transition: top 0.3s ease;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero{
+  background-size: cover;
+  background-image: url('img/Rectangle\ 1\ \(2\).jpg');
+  height: 230px;
+}
+
+ .nav {
+  padding: 41px 71px 0 71px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo{
+color: #fff;
+}
+.logo > i{
+  font-size: 28px;
+  color: #818181;
+}
+.logo span{
+  font-size: 30px;
+}
+.logo img {
+  height: 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+.search button{
+  width: 136px;
+  height: 44px;
+  background-color: #FF6B01;
+  border-style: none;
+  outline: none;
+  margin-left: 30px;
+  border-radius: 5px;
+  color: #fff;
+}
+.search button:hover{
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 39px;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ccc;
+} 
+.menu .jeje a:first-child{
+  border-bottom: 3px solid  #FF6B08;
+  margin-right: 20px;
+}
+@media (max-width: 768px){
+  .logo{
+    display: flex;
+  }
+  .nav{
+    padding: 40px 50px 0 60px;
+  }
+  .menu li{
+    align-items: center;
+    text-align: center;
+  }
+  .search{
+    justify-content: space-between;
+    margin: 0;
+  }
+  .menu li{
+    margin-left: 20px;
+  }
+}
+@media (max-width: 320px){
+  .logo span{
+    display: none;
+  }
+  .nav{
+    padding: 30px 18px 0 18px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "logo library"
+      "buttons buttons";
+  }
+  .logo{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  .menu{
+    grid-area: library;
+    display: flex;
+    align-items: center;
+  }
+  .search{
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .menu li{
+    margin-left: 20px;
+  }
+  .menu {
+    margin-left: auto;
+  }
+  .search button{
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+}
+
